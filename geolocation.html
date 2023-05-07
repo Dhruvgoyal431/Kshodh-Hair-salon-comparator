@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Map page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+ 
+.dropbtn {
+  background-color: grey;
+  color: white;
+  
+  font-size: 16px;
+  border: black;
+  cursor: pointer;
+  padding: 20px 270px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: black;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('images/search.png');
+  background-position: 540px 14px;
+  background-repeat: no-repeat;
+  font-size: 17px;
+  font-style: italic;
+  padding: 17px 200px;
+  border-color: black;
+ 
+}
+
+#myInput:focus {outline: 3px solid black;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.jumbotron {
+  position: absolute;
+  overflow:hidden;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.jumbotron .abc {
+  position:relative;
+  z-index:2;
+  background:rgba(0,0,0,0.2);
+  padding:100px;
+  border:1px solid rgba(0,0,0,0.1);
+  border-radius:3px;
+}
+
+.jumbotron-background {
+  object-fit:cover;
+  font-family: 'object-fit: cover;';
+  position:absolute;
+  top:0;
+  z-index:1;
+  
+  opacity:0.5;
+}
+
+img.blur {
+	-webkit-filter: blur(4px);
+	filter: blur(4px);
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
+  width: 1500px;
+  height: 600px;
+  
+}
+.logi{
+    padding-left: 650px;
+}
+</style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top py-3 shadow-lg p-3 mb-5 bg-black rounded">
+        <a class="navbar-brand" href="index.html"> 
+
+        <img src="images/logo.png" class="logi" width="160" height="70"> </a>
+        </a> 
+          
+           
+    </nav>
+</header>
+    <div class="jumbotron bg-dark">
+  
+        <div class="jumbotron-background">
+          <img src="images/abc2.jpg" class="blur ">
+        </div>
+      
+        <div class="abc">
+      
+    
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">GeoLocations</button>
+            <div id="myDropdown" class="dropdown-content">
+              
+              <a href="https://www.google.com/maps/d/u/0/embed?mid=1ZSPLpXiJd0q-hYQ4XICXhuLVGpJHFoo&ehbc=2E312F" target="_blank" width="640" height="480">All</a>
+              <a href="https://www.google.com/maps/d/embed?mid=1u-HvsV_RSjkHaOnEJbX-VhWZxeqqbHs&ehbc=2E312F" target="_blank" width="640" height="480">Thane</a>
+              <a href="https://www.google.com/maps/d/embed?mid=1rsYn73PvZDNjnLDErh_0Rv2Wo3BBmT0&ehbc=2E312F" target="_blank" width="640" height="480">Ghatkopar</a>
+              <a href="https://www.google.com/maps/d/embed?mid=1aWpJuqJ7TZyvNitrlY2oM79XoFKSwOk&ehbc=2E312F" target="_blank" width="640" height="480">Panvel</a>
+              <a href="https://www.google.com/maps/d/embed?mid=13SqomQPMNR_zne9n6oDcDPJIN5Bdxro&ehbc=2E312F" target="_blank" width="640" height="480">Juhu</a>
+              <a href="https://www.google.com/maps/d/embed?mid=1h3a2fEsjjjAy3akUIA38pSPhqxO5tgQ&ehbc=2E312F" target="_blank" width="640" height="480">Bandra</a>
+              
+            </div>
+            </div>
+            <input type="text" placeholder="SEARCH.." id="myInput" onkeyup="filterFunction()">
+          </div>
+      <br><br>
+        </div>
+        <!-- /.container -->
+        
+       
+      </div>
+      
+      
+      
+      
+
+<!-- 
+  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">GeoLocations</button>
+  <div id="myDropdown" class="dropdown-content">
+    
+    <a href="compare.html">About</a>
+    <a href="#base">Base</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="#custom">Custom</a>
+    
+  </div>
+  </div>
+  <input type="text" placeholder="SEARCH.." id="myInput" onkeyup="filterFunction()">
+</div> -->
+
+<!-- <script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script> -->
+
+<script>
+    $(function () { objectFitImages() });
+
+
+    function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+

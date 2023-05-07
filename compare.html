@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Comparison page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet">
+    <style>
+        body{
+    min-height: 100vh;
+    font-family: monospace;
+    background-image: 
+        linear-gradient( 
+            to bottom right, #EFD7F4, #c5c7f1);
+    margin: 0;
+}
+.container{
+    background-color: #E9E0F7;
+    width: 1000px;
+    max-width:  100%;
+    margin: 50px auto 0;
+    border-radius: 10px;
+}
+.filter{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 32.666% 32.666% 32.666%;
+    column-gap: 1%;
+    row-gap: 10px;
+}
+.filter .item{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter .item select,
+.filter .item input,
+.filter .item button{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    border-left: 1px solid #ddd;
+    outline: none;
+}
+.filter .item label{
+    display: block;
+    width: 40%;
+    padding: 0 10px;
+}
+.filter .item.submit button{
+    background-color: #AA82ED;
+    color: #fff;
+    width: 100px;
+    border-radius: 10px;
+}
+.countResults{
+    font-size: xx-large;
+    text-align: center;
+    padding: 20px;
+}
+#list{
+    padding: 20px;
+    display: grid;
+    column-gap: 1%;
+    grid-template-columns: 32.66% 32.66% 32.66%;
+    row-gap: 10px;
+}
+#list .item img{
+    width: 90%;
+    height:300px;
+    object-fit: cover;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+#list .item{
+    background-color: #fff5;
+    text-align: center;
+    border-radius: 10px;
+}
+#list .item .title{
+    font-weight: bold;
+    font-size: large;
+    color: #713f05;
+}
+#list .item .price{
+    color: #713f05;
+    letter-spacing: 1px;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h1{
+    padding-left: 45%;
+}
+    </style>
+</head>
+<body>
+<header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top py-3 shadow-lg p-3 mb-5 bg-black rounded">
+            <a class="navbar-brand" href="index.html"> 
+    
+                <img src="images/logo.png" width="160" height="70" onclick=""> </a>
+            </a> 
+              
+               
+        </nav>
+    </header>
+    
+    <h1>KSHODH COMPARE</h1>
+    <div class="container">
+        <form class="filter">
+            <div class="item">
+                <h3 for="">&nbsp;&nbsp;LOCATION&nbsp;&nbsp;</h3>
+                <select name="category">
+                    <option value="">---</option>
+                    <option value="thane">Thane</option>
+                    <option value="ghatkopar">Ghatkopar</option>
+                    <option value="panvel">Panvel</option>
+                    <option value="juhu">Juhu</option>
+                    <option value="Polo">Bandra</option>
+                </select>
+            </div>
+            <div class="item">
+                <h3 for="">&nbsp;&nbsp;CATEGORY&nbsp;&nbsp;</h3>
+                <select name="color">
+                    <option value="">---</option>
+                    <option value="Highlights">Highlights</option>
+                    <option value="Haircut">Haircut</option>
+                    <option value="Straightening">Straightening</option>
+                    <option value="Keratin">Keratin</option>
+                    <option value="Hairspa">Hairspa</option>
+                </select>
+            </div>
+            <div class="item">
+                <h3 for="">&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;</h3>
+                <input type="text" name="name">
+            </div>
+            <div class="item">
+                <label for=""><b>Min Price</b></label>
+                <input type="number" name="minPrice" width="30px">
+            </div>
+            <div class="item">
+                <label for=""><b><br>Max Price<br>.
+                </b></label>
+                <input type="number" name="maxPrice">
+            </div>
+            <div class="item submit">
+                <button>Search</button>
+            </div>
+        </form>
+        <div class="countResults">
+            Found <b id="count">5</b> results
+        </div>
+
+        <!-- <button type="button" id="myBtn" onclick="myFunction()">Try it</button> -->
+
+        <div id="list">
+
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
